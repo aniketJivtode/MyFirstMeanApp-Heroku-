@@ -4,7 +4,7 @@ const path=require('path');
 const bodyParser=require('body-parser');
 const route=require('./routes/route');
 const cors=require('cors');
-const port=3030;
+const port=process.env.PORT || 3030;
 
 
 
