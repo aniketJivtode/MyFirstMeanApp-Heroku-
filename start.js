@@ -23,7 +23,7 @@ app.use(cors());
 //set static pages
 app.use(express.static(path.join(__dirname,'public')));
 
-app.use(express.static(__dirname + 'client/dist/index.html'));
+
 
 
 
@@ -46,7 +46,7 @@ mongoose.connection.on('error',(err)=>{
 
 
 app.get('/',(req,res)=>{
-    res.send("HOME PAGE");
+    res.sendFile(path.join(__dirname,"public/index.html"));
 });
 
 
