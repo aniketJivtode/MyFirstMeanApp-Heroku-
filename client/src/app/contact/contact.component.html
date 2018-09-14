@@ -1,0 +1,59 @@
+<div class="conainer">
+  <h3 class="page-header">ADD CONTACT</h3>
+<div class="form-group">
+        <div >
+          <label > FirstName</label>
+          <input type="text" name="FirstName"  [(ngModel)]="first_name" placeholder="Enter your first name" id="FirstName" class="form-control" >
+        </div>
+    
+        <div >
+            <label>LastName</label>
+            <input type="text" name="LastName" [(ngModel)]="last_name" placeholder="Enter your last name" class="form-control" id="LastName" >
+        </div>
+          
+
+
+        <div >
+            <label >Phone Number</label>
+            <input type="text" name="PhoneNumber" [(ngModel)]="phone_number" placeholder="Enter your contact number" class="form-control" id="PhoneNumber" >
+        </div>
+        
+        <div>
+        <input type="button" (click)="AddContact()" value="Add Contact" class="btn btn-primary"> 
+        </div>
+    
+</div>
+</div>
+
+    <hr>
+
+
+
+
+  
+
+  <div  class="container"> 
+  <div *ngFor="let cont of contacts">
+  
+    <div class="row">
+    <div class="col-md-3">
+      {{cont.FirstName}}
+    </div>
+  
+    <div class="col-md-3">
+      {{cont.LastName}}
+    </div>
+  
+    <div class="col-md-3">
+      {{cont.PhoneNumber}}
+    </div>
+  
+    <div class="col-md-3">
+      <input type="button" class="btn btn-danger" (click)="deleteContact(cont._id)" value="Delete">
+    </div>
+  </div>
+  </div>
+  <br> 
+    </div>
+
+
